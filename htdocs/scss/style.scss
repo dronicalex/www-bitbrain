@@ -166,6 +166,32 @@ div {
     }
 }
 
+.art-button-3 {
+    background: transparent;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 130%;
+    text-align: center;
+    height: 80px;
+    color: #ff9900;
+    border: 1px solid #ff9900;
+    max-width: 217px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 500px) {
+        max-width: 190px;
+        height: 60px;
+        font-size: 16px;
+    }
+    &:hover,
+    &:active {
+        border-color: #e15100;
+        color: #e15100;
+        transition: all 0.5s;
+    }
+}
+
 /* header */ 
 
 section.top {
@@ -550,6 +576,38 @@ section.top {
     }
     @media (max-width: 500px) {
         padding: 18px 14px;
+    }
+}
+
+.cards-wrap-sm {
+    flex-wrap: wrap;
+    & .card {
+        margin-bottom: 40px;
+        @media (max-width: 992px) {
+            margin-bottom: 15px;
+        }
+    }
+    & .card-price {
+        color: #242424;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 130%;
+        margin-bottom: 25px;
+        margin-top: 20px;
+        @media (min-width: 992px) {
+            font-size: 38px;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+    }
+    & .art-button-2 {
+        font-size: 16px;
+    }
+    & .card-btn {
+        justify-content: space-between;
+        & > a {
+            width: 48%;
+        }
     }
 }
 
