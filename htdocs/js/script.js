@@ -18,6 +18,42 @@ window.onload = function() {
       });
     }
   }
+
+  //send form
+ let form = document.querySelector('#subscribe');
+ if(form) {
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    let formData = new FormData(form);
+    let request = new XMLHttpRequest();
+    request.open('POST', '/mail.php', true);
+    request.send(formData);
+    request.addEventListener('readystatechange', function() {
+      if (this.readyState == 4 && this.status == 200) {
+       console.log(this.responseText)
+       let data = JSON.parse(this.responseText);
+        if(data.success == 1) {
+           console.log('Форма отправлена');
+           document.querySelector('.success').classList.add('active');
+        } else {        
+         document.querySelector('#subscribe input[name="email"]').classList.add(data.email);
+        }
+        
+      }
+    });
+  });
+ }
+
+ let overlay = document.querySelector('.success-overlay');
+ let closeBtn = document.querySelector('.success-close ');
+
+ overlay.addEventListener('click', function(e) {
+  document.querySelector('.success').classList.remove('active');
+ });
+
+ closeBtn.addEventListener('click', function(e) {
+  document.querySelector('.success').classList.remove('active');
+ });
  
 
 }
