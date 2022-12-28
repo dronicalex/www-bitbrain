@@ -34,14 +34,17 @@ $mail->isSMTP();
 $mail->SMTPAuth = true;
 $mail->SMTPDebug = 0;
 
-$mail->Host = 'mail.bitbrain.me';
-$mail->Port = 587;
-$mail->Username = 'www@bitbrain.me';
-$mail->Password = '';
+if(file_exists("/mail.php"))
+include "/mail.php";
+$mail->SMTPAutoTLS = false;
+//$mail->SMTPAutoTLS = true;
+//$mail->SMTPSecure = "tls";
+$mail->SMTPAuth = true;
 
 
-$mail->setFrom('www@bitbrain.me', 'BITBRAIN');	
-$mail->AddAddress('support@bitbrain.me');
+//$mail->setFrom('www@bitbrain.me', 'BITBRAIN');<------>
+$mail->setFrom('no-reply@bitbrain.me', 'BITBRAIN');
+//$mail->AddAddress('support@bitbrain.me');
 $mail->AddAddress('orenlr56@yandex.ru');
 
 $mail->Subject = 'Заявка с сайта PRO BITBRAIN';
