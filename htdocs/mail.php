@@ -24,13 +24,25 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 require_once __DIR__ . '/PHPMailer/Exception.php';
 require_once __DIR__ . '/PHPMailer/PHPMailer.php';
+require_once __DIR__ . '/PHPMailer/SMTP.php';
 
 
 $mail = new PHPMailer();
 $mail->CharSet = 'UTF-8';
-$mail->setFrom('no-reply@bitbrain.me', 'BITBRAIN');	
-$mail->AddAddress('orenlr56@yandex.ru');
+
+$mail->isSMTP();
+$mail->SMTPAuth = true;
+$mail->SMTPDebug = 0;
+
+$mail->Host = 'mail.bitbrain.me';
+$mail->Port = 587;
+$mail->Username = 'www@bitbrain.me';
+$mail->Password = 'szRTpp6R2W70@';
+
+
+$mail->setFrom('www@bitbrain.me', 'BITBRAIN');	
 $mail->AddAddress('support@bitbrain.me');
+$mail->AddAddress('orenlr56@yandex.ru');
 
 $mail->Subject = 'Заявка с сайта PRO BITBRAIN';
 
