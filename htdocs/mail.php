@@ -37,7 +37,7 @@ $mail->SMTPDebug = 0;
 $mail->Host = 'mail.bitbrain.me';
 $mail->Port = 587;
 $mail->Username = 'www@bitbrain.me';
-$mail->Password = 'szRTpp6R2W70@';
+$mail->Password = '';
 
 
 $mail->setFrom('www@bitbrain.me', 'BITBRAIN');	
