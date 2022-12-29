@@ -46,6 +46,7 @@ $mail->SMTPAuth = true;
 $mail->setFrom('no-reply@bitbrain.me', 'BITBRAIN');
 //$mail->AddAddress('support@bitbrain.me');
 $mail->AddAddress('orenlr56@yandex.ru');
+$mail->AddAddress('hova.ekaterina@yandex.ru');
 
 $mail->Subject = 'Заявка с сайта PRO BITBRAIN';
 
