@@ -592,12 +592,47 @@ section.top {
         font-size: 30px;
         font-weight: 700;
         line-height: 130%;
-        margin-bottom: 25px;
-        margin-top: 20px;
         @media (min-width: 992px) {
             font-size: 38px;
+        }
+    }
+    & .card-price-line {
+        margin-bottom: 25px;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: space-between;
+        @media (min-width: 992px) {
             margin-bottom: 20px;
             margin-top: 0;
+        }
+    }
+    & .card-more a {
+        position: relative;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 130%;
+        color: #199CDE;
+        text-decoration: underline;
+        @media (min-width: 992px) {
+            font-size: 20px;
+        }
+        &:hover {
+            text-decoration: none;
+        }
+        &::before {
+            content:'';
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            background: url(../images/question.svg) top center no-repeat;
+            background-size: 100%;
+            top: 0;
+            left: -24px;
+            @media (min-width: 992px) {
+                width: 25px;
+                height: 25px;
+                left: -32px;
+            }
         }
     }
     & .art-button-2 {
