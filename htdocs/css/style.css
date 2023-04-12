@@ -152,7 +152,8 @@ div {
   font-size: 20px;
   line-height: 130%;
   text-align: center;
-  height: 80px;
+  /*height: 80px;*/
+  height: 60px;
   color: #FFFFFF;
   max-width: 217px;
   display: flex;
@@ -233,6 +234,13 @@ section.top .top-bg {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+}
+
+@media (max-width: 1600px) {
+  .header-wrap {
+    margin-bottom: 0;
+    padding: 30px 20px 10px;
+  }
 }
 
 @media (max-width: 710px) {
@@ -515,6 +523,14 @@ section.top .top-bg {
   margin-left: -960px;
 }
 
+@media (max-width: 1600px) {
+  .banner-img img {
+    max-width: 1800px;
+    width: 1800px;
+    margin-left: -900px;
+  }
+}
+
 @media (max-width: 1199px) {
   .banner-img img {
     width: 1480px;
@@ -560,6 +576,12 @@ section.top .top-bg {
   margin: -122px auto 54px;
 }
 
+@media (max-width: 1600px) {
+  .banner-text {
+    margin: -140px auto 32px;
+  }
+}
+
 @media (max-width: 1199px) {
   .banner-text {
     font-size: 24px;
@@ -586,6 +608,12 @@ section.top .top-bg {
 .banner-btn {
   text-align: center;
   padding-bottom: 165px;
+}
+
+@media (max-width: 1600px) {
+  .banner-btn {
+    padding-bottom: 120px;
+  }
 }
 
 @media (max-width: 710px) {
@@ -683,8 +711,12 @@ section.top .top-bg {
   border: 1px solid #C5C5C5;
   border-radius: 10px;
   width: 100%;
-  max-width: 550px;
-  padding: 52px 48px;
+  /*max-width: 550px;
+    padding: 52px 48px;*/
+  max-width: 365px;
+  padding: 28px 25px;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (max-width: 1199px) {
@@ -718,14 +750,14 @@ section.top .top-bg {
 
 .cards-wrap-sm .card-price {
   color: #242424;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 700;
   line-height: 130%;
 }
 
 @media (min-width: 992px) {
   .cards-wrap-sm .card-price {
-    font-size: 38px;
+    font-size: 32px;
   }
 }
 
@@ -739,7 +771,7 @@ section.top .top-bg {
 @media (min-width: 992px) {
   .cards-wrap-sm .card-price-line {
     margin-bottom: 20px;
-    margin-top: 0;
+    margin-top: 15px;
   }
 }
 
@@ -754,7 +786,7 @@ section.top .top-bg {
 
 @media (min-width: 992px) {
   .cards-wrap-sm .card-more a {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -769,7 +801,7 @@ section.top .top-bg {
   position: absolute;
   background: url(../images/question.svg) top center no-repeat;
   background-size: 100%;
-  top: 0;
+  top: -3px;
   left: -24px;
 }
 
@@ -794,11 +826,11 @@ section.top .top-bg {
 }
 
 .card-wrap {
-  margin-top: 34px;
+  margin-top: 24px;
   margin-bottom: 13px;
   display: flex;
   flex-direction: column;
-  height: 364px;
+  height: 100%;
 }
 
 @media (max-width: 500px) {
@@ -822,7 +854,7 @@ section.top .top-bg {
 
 .card-title {
   font-weight: 700;
-  font-size: 28px;
+  font-size: 24px;
   line-height: 130%;
   color: #3B363C;
   margin-bottom: 17px;
@@ -853,10 +885,16 @@ section.top .top-bg {
 
 .card-text {
   font-weight: 300;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 150%;
   color: #242424;
   flex-grow: 2;
+}
+
+@media (max-width: 1600px) {
+  .card-text {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 500px) {

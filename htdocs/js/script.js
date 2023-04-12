@@ -1,5 +1,31 @@
 window.onload = function() {
 
+  let moveActive = false;
+
+  function scrollDown() {
+    if(!moveActive) {
+      document.querySelector('#cards').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+      moveActive = true;
+    }
+  }
+
+  window.addEventListener('scroll', function() {
+    
+    if (window.pageYOffset > 100) {
+      moveActive = true;
+    } else if (window.pageYOffset == 0) {
+      moveActive = false;
+      setTimeout(scrollDown, 5000);
+    }
+  });
+
+  
+  setTimeout(scrollDown, 5000);
+
+
   /* scroll */
   let btnsScroll = document.querySelectorAll('.scroll-down');
   
