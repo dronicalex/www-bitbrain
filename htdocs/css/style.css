@@ -764,17 +764,8 @@ section.top .top-bg {
 }
 
 .cards-wrap-sm .card-price-line {
-  margin-bottom: 25px;
-  margin-top: 20px;
   align-items: center;
   justify-content: space-between;
-}
-
-@media (min-width: 992px) {
-  .cards-wrap-sm .card-price-line {
-    margin-bottom: 20px;
-    margin-top: 15px;
-  }
 }
 
 .cards-wrap-sm .card-more a {
@@ -822,6 +813,7 @@ section.top .top-bg {
 .cards-wrap-sm .card-btn {
   justify-content: space-between;
   align-items: center;
+  margin-top: 20px;
 }
 
 .cards-wrap-sm .card-btn > a {
@@ -961,11 +953,13 @@ section.top .top-bg {
   line-height: 150%;
   color: #242424;
   flex-grow: 2;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 1600px) {
   .card-text {
     font-size: 16px;
+    margin-bottom: 15px;
   }
 }
 
@@ -973,6 +967,7 @@ section.top .top-bg {
   .card-text {
     font-size: 14px;
     margin-bottom: 23px;
+    margin-bottom: 15px;
   }
 }
 
