@@ -717,6 +717,8 @@ section.top .top-bg {
   padding: 28px 25px;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
 }
 
 @media (max-width: 1199px) {
@@ -819,10 +821,80 @@ section.top .top-bg {
 
 .cards-wrap-sm .card-btn {
   justify-content: space-between;
+  align-items: center;
 }
 
 .cards-wrap-sm .card-btn > a {
   width: 48%;
+}
+
+.card-price-block {
+  align-items: center;
+}
+
+.card-price-block__new {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 130%;
+  color: #E93030;
+  margin-right: 20px;
+}
+
+@media (max-width: 991px) {
+  .card-price-block__new {
+    font-size: 26px;
+    margin-right: 14px;
+  }
+}
+
+.card-price-block__old {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 130%;
+  text-decoration-line: line-through;
+  color: #242424;
+}
+
+@media (max-width: 991px) {
+  .card-price-block__old {
+    font-size: 20px;
+  }
+}
+
+.card-ribbon {
+  position: absolute;
+  width: 193px;
+  height: 32px;
+  background: #E93030;
+  transform: rotate(45deg);
+  top: 31px;
+  right: -48px;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .card-ribbon {
+    height: 27px;
+    top: 26px;
+    right: -56px;
+  }
+}
+
+.card-ribbon__text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+@media (max-width: 991px) {
+  .card-ribbon__text {
+    font-size: 13px;
+    line-height: 26px;
+  }
 }
 
 .card-wrap {
