@@ -898,7 +898,13 @@ section.top .top-bg {
   margin-bottom: 13px;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 310px;
+}
+
+@media (max-width: 1199px) {
+  .card-wrap {
+    height: 274px;
+  }
 }
 
 @media (max-width: 500px) {
