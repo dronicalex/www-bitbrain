@@ -4,11 +4,15 @@ window.onload = function() {
 
   function scrollDown() {
     if(!moveActive) {
-      document.querySelector('#cards').scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-      moveActive = true;
+      let cards = document.querySelector('#cards');
+      if(cards) {
+        cards.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+        moveActive = true;
+      }
+      
     }
   }
 
