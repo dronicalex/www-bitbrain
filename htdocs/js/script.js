@@ -86,6 +86,30 @@ window.onload = function() {
  });
  
 
+  //tabs
+  let tabs = document.querySelectorAll('.tabs-top .tab');
+  let tabText = document.querySelectorAll('.tabs-wrap .tab');
+
+  for (let i=0; i<tabs.length;i++) {
+   tabs[i].addEventListener("click", function(e) {
+    e.preventDefault();
+    tabs[i].classList.add('active');
+    tabText[i].classList.add('active');
+    for (let m=0; m<tabs.length;m++) {
+         if(i != m) {
+             tabs[m].classList.remove('active');
+         }
+    }
+    for (let m=0; m<tabText.length;m++) {
+         if(i != m) {
+             tabText[m].classList.remove('active');
+         }
+    }     
+   });
+  }
+
+ 
+
 }
 
 
