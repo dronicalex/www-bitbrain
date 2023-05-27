@@ -1599,3 +1599,16 @@ color: #B4B4B4;
         }
     }
 }
+
+.review-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    & span {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 130%;
+        color: #3B363C;
+        margin-right: 6px;
+    }
+}
