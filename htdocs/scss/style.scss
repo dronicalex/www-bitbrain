@@ -735,6 +735,35 @@ section.top {
     }
 }
 
+.card-ribbon-blue {
+    position: absolute;
+    width: 193px;
+    height: 32px;
+    background: linear-gradient(267.52deg, #056FBC -0.2%, #13A6E6 49.35%, #056FBC 99.94%);
+    transform: rotate(-45deg);
+    top: 31px;
+    left: -48px;
+    text-align: center;
+    @media (max-width: 991px) {
+        height: 27px;
+        top: 26px;
+        left: -56px;
+    }
+    &__text {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        @media (max-width: 991px) {
+            font-size: 13px;
+            line-height: 26px;
+        }
+    }
+}
+
 .card-wrap {
     margin-top: 24px;
     margin-bottom: 13px;
@@ -922,6 +951,48 @@ section.top {
     @media (max-width: 710px) {
         font-size: 16px;
         margin-bottom: 15px;
+    }
+}
+
+.content table {
+    margin-bottom: 30px;
+    @media (max-width: 710px) {
+        margin-bottom: 15px;
+    }
+    & td {
+        background: #f2f2f2;
+        padding: 10px 25px;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 150%;
+        color: #242424;
+        @media (max-width: 710px) {
+            font-size: 16px;
+            padding: 10px 15px;
+        }
+    }
+    & ul {
+        margin: 0;
+        padding: 0;
+        & li {
+            list-style: none;
+            padding-left: 20px;
+            position: relative;
+            &::before {
+                content:'';
+                width: 4px;
+                height: 4px;
+                display: block;
+                border-radius: 50%;
+                background: #242424;
+                position: absolute;
+                top: 14px;
+                left: 0;
+                @media (max-width: 710px) {
+                    top: 11px;
+                }
+            }
+        }
     }
 }
 
@@ -1610,5 +1681,133 @@ color: #B4B4B4;
         line-height: 130%;
         color: #3B363C;
         margin-right: 6px;
+    }
+}
+
+.installment {
+    background: #FFEFCE;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    padding: 30px 34px;
+    height: 127px;
+    @media (max-width: 1199px) {
+        height: auto;
+    }
+    @media (max-width: 991px) {
+        margin-bottom: 20px;
+        padding: 21px;
+    }
+    & > a {
+        text-decoration: none;
+    }
+}
+
+.installment-wrap {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    @media (max-width: 991px) {
+        justify-content: flex-start;
+    }
+}
+
+.installment-block {
+    @media (max-width: 991px) {
+        margin-bottom: 16px;
+        width: calc(100% - 162px);
+    }
+    @media (max-width: 500px) {
+        width: 100%;
+        min-height: 106px;
+        margin-bottom: 0;
+    }
+}
+
+.installment-image {
+    width: 268px;
+    @media (max-width: 991px) {
+        width: 0;
+    }
+    & img {
+        position: absolute;
+        top: auto;
+        bottom: -30px;
+        @media (max-width: 991px) {
+            bottom: -21px;
+            right: -21px;
+            width: 162px;
+        }
+       
+    }
+}
+
+.installment-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    color: #242424;
+    margin-bottom: 4px;
+    @media (max-width: 991px) {
+        font-size: 20px;
+    }
+}
+
+.installment-subtitle {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 150%;
+    color: #242424;
+    @media (max-width: 991px) {
+        font-size: 14px;
+        line-height: 150%;
+    }
+}
+
+.installment-link span {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+    color: #199CDE;
+    position: relative;
+    @media (max-width: 991px) {
+        font-size: 14px;
+        line-height: 150%;
+    }
+    @media (max-width: 500px) {
+        text-decoration: underline;
+    }
+    &:hover {
+        @media (max-width: 500px) {
+            text-decoration: none;
+        }
+    }
+    &::before {
+        content:'';
+        width: 100%;
+        height: 1px;
+        background: #199CDE;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        opacity: 1;
+        @media (max-width: 500px) {
+            display: none;
+        }
+    }
+    &:hover::before {
+        opacity: 0;
+        transition: 0.5s;
+    }
+}
+
+.installment-link {
+    @media (max-width: 1199px) {
+        width: 100%;
+    }
+    @media (max-width: 500px) {
+        width: 88px;
     }
 }
