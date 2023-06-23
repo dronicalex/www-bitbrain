@@ -1524,6 +1524,15 @@ color: #B4B4B4;
     }
 }
 
+.payment-btns-center {
+    justify-content: center;
+    & .payment-btn {
+        margin-bottom: 1rem;
+        padding: 0 15px;
+    }
+}
+
+
 .payment-btn {
     width: 45%;
     @media (max-width: 991px) {
