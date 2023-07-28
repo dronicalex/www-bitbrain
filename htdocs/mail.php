@@ -9,6 +9,25 @@ if ((isset($_POST['email'])) && (!empty($_POST["email"]))) {
 	$errors = true;
 }
 
+if($_POST['id'] == 'callback') {
+	if ((isset($_POST['username'])) && (!empty($_POST["username"]))) {
+		$result['username'] = 'is-valid';
+	} else {
+		$result['username'] = 'is-invalid';
+		$errors = true;
+	}
+	if ((isset($_POST['whatsapp'])) && (!empty($_POST["whatsapp"]))) {
+		$result['whatsapp'] = 'is-valid';
+	} else {
+		$result['whatsapp'] = 'is-invalid';
+	}
+	if ((isset($_POST['telegram'])) && (!empty($_POST["telegram"]))) {
+		$result['telegram'] = 'is-valid';
+	} else {
+		$result['telegram'] = 'is-invalid';
+	}
+}
+
 if($errors) {
 	$result['success'] = 0;
 	echo json_encode($result);
@@ -78,3 +97,43 @@ $mail->msgHTML($body);
 
 if ($mail->send()) {$result = "success";} 
 else {$result = "error";}
+
+/* unisender */ 
+
+$api_key = '6rhfdo8myeiengg94xz7yt56fe37qtci3c7yuche'; 
+$list_ids = '144'; 
+if($_POST['id'] == 'callback') {
+	$list_ids = '143';
+}
+$tags = ''; 
+$double_optin = 3;
+$overload = 0; 
+$email_fo = $_POST["email"];
+$name_un = $_POST["username"];
+$form_name = $_POST["form-name"];
+$whatsapp = $_POST["whatsapp"];
+$telegram = $_POST["telegram"];
+
+$subscribe = array (    
+  'api_key' => $api_key,
+  'list_ids' => $list_ids,
+  'double_optin' => $double_optin,
+  'fields[tags]' => $tags,
+  'fields[email]' => $email_fo,
+  'fields[phone]' => $whatsapp,
+  'fields[Name]' => $name_un,
+  'fields[formid]' => $form_name,
+  'fields[overload]' => $overload,
+  'fields[input]' => $whatsapp,
+  'fields[input_2]' => $telegram,
+);
+ 
+// Устанавливаем соединение
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $subscribe); 
+curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+curl_setopt($ch, CURLOPT_URL,
+            'https://api.unisender.com/ru/api/subscribe?format=json'); 
+$results = curl_exec($ch);

@@ -408,6 +408,7 @@
                 </div>
                 <div class="subscribe-form">
                     <form action="/mail.php" method="post" class="ajax_form needs-validation" id="subscribe">
+                        <input type="hidden" name="id" value="subscribe">
                         <div class="form-group d-none">
                             <input type="text" name="name" class="form-control" placeholder="Ваше имя">
                         </div>
@@ -442,7 +443,7 @@
             <div class="success-inner">
                 <img src="images/success.png" alt="" class="success-inner-img" />
                 <div class="success-inner-title">
-                    Ваш e-mail адрес добавлен в рассылку
+                    
                 </div>
             </div>
         </div>
@@ -509,6 +510,102 @@
         </div>
    </footer>
 
+   <section class="popup" id="popup-1">
+    
+        <div class="popup-wrap">
+            <button class="popup-close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect y="18.7879" width="26.5701" height="1.7142" transform="rotate(-45 0 18.7879)" fill="#858585"/>
+                <rect x="18.7881" y="20" width="26.5701" height="1.7142" transform="rotate(-135 18.7881 20)" fill="#858585"/>
+                </svg>
+            </button>
+            <div class="message"></div>
+            <div class="popup-inner">
+                
+                <div class="popup-title">
+                    <span>Есть вопросы?</span>
+                    Оставьте контакты, и наш менеджер свяжется с вами
+                </div>
+                
+                <form action="/mail.php" method="post" class="ajax_form needs-validation" id="callback">
+                    <input type="hidden" name="id" value="callback">                                          
+                    <div class="form-group form-floating">
+                        <input type="text" name="username" class="form-control">
+                        <label for="username">Имя*</label>
+                        <div class="valid-feedback">
+                            Все хорошо!
+                        </div>
+                        <div class="invalid-feedback">
+                            Пожалуйста, введите имя
+                        </div>
+                    </div>
+
+                    <div class="form-group d-none">
+                        <input type="text" name="name" class="form-control" placeholder="Ваше имя">
+                        
+                    </div>
+
+                    <div class="form-group d-none">
+                        <input type="text" name="mail-group" class="form-control" value="mail-group-2">
+                        
+                    </div>
+
+                    <div class="form-group d-none">
+                        <input type="text" name="form-name" class="form-control" value="">
+                    </div>
+
+                   
+
+                    <div class="form-group form-floating">
+                        <input type="text" name="whatsapp" class="form-control" inputmode="text">
+                        <label for="whatsapp">WhatsApp*</label>
+                        <div class="invalid-feedback">
+                            Пожалуйста, введите ваш WhatsApp
+                        </div>
+                    </div>
+
+                    <div class="form-group form-floating">
+                        <input type="text" name="telegram" class="form-control" inputmode="text">
+                        <label for="telegram">Telegram*</label>
+                        <div class="invalid-feedback">
+                            Пожалуйста, введите ваш Telegram
+                        </div>
+                    </div>
+
+                    <div class="form-group form-floating">
+                        <input type="email" name="email" class="form-control" inputmode="text">
+                        <label for="email">Email*</label>
+                        <div class="invalid-feedback">
+                            Пожалуйста, введите адрес электронной почты
+                        </div>
+                    </div>
+
+                   
+                    <div class="form-check">
+                        <input type="checkbox" name="accept" id="accept" value="1" checked>
+                        <label for="accept">Я согласен с Политикой конфиденциальности</label>
+                       
+                    </div>
+
+                    <div class="form-bottom">
+
+                        <button type="submit" name="form-send-button" class="btn art-button-2">
+                            <span>Оставить заявку</span>
+                        </button>
+                       
+                    </div>  
+                </form>
+
+              
+        
+            </div>
+        </div>
+    </section>
+
+    <a href="#popup-1" class="popup-btn widget-icon">
+        <img src="images/icon-question.svg" alt="" />
+    </a>
+
    
 	<!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
@@ -533,10 +630,9 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-L0XJNE0HYS');
     </script>
-    <script src="//code.jivo.ru/widget/v4KrK3UEcc" async></script>
+    
 	<script src="js/script.js?v1.6"></script>
 
 </body>
