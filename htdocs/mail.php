@@ -99,7 +99,7 @@ if ($mail->send()) {$result = "success";}
 else {$result = "error";}
 
 /* unisender */ 
-/*
+
 $api_key = '6rhfdo8myeiengg94xz7yt56fe37qtci3c7yuche'; 
 $list_ids = '144'; 
 if($_POST['id'] == 'callback') {
@@ -126,10 +126,9 @@ $subscribe = array (
   'fields[overload]' => $overload,
   'fields[input]' => $whatsapp,
   'fields[input_2]' => $telegram,
-);*/
+);
  
 // Устанавливаем соединение
-/*
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POST, 1);
@@ -138,17 +137,3 @@ curl_setopt($ch, CURLOPT_TIMEOUT, 10);
 curl_setopt($ch, CURLOPT_URL,
             'https://api.unisender.com/ru/api/subscribe?format=json'); 
 $results = curl_exec($ch);
-*/
-
-
-
-$postdata = http_build_query($subscribe);
-$opts = array('http' =>
-    array(
-        'method'  => 'POST',
-        'header'  => 'Content-type: application/x-www-form-urlencoded',
-        'content' => $postdata
-    )
-);
-$context  = stream_context_create($opts);
-$result = file_get_contents('https://api.unisender.com/ru/api/subscribe?format=json', false, $context);
