@@ -2196,3 +2196,105 @@ body.mobile {
     cursor: pointer;
 }
 
+
+.banner-quize {
+    border-radius: 5px;
+    background: linear-gradient(0deg, #000 0%, #696868 100%);
+    margin-bottom: 38px;
+    padding: 30px 34px;
+    height: 186px;
+    @media (max-width: 1199px) {
+        height: auto;
+    }
+    @media (max-width: 991px) {
+        margin-bottom: 20px;
+        padding: 21px;
+    }
+    & > a {
+        text-decoration: none;
+    }
+}
+
+.banner-quize-wrap {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    @media (max-width: 991px) {
+        display: block;
+    }
+}
+
+.banner-quize-block {
+    max-width: 436px;
+    @media (max-width: 991px) {
+        margin-bottom: 16px;
+        width: calc(100% - 162px);
+    }
+    @media (max-width: 500px) {
+        width: 100%;
+        max-width: 260px;
+        margin-bottom: 42px;
+    }
+}
+
+.banner-quize-image {
+    width: 325px;
+    @media (max-width: 1199px) {
+        width: 325px;
+        display: flex;
+        align-items: flex-end;
+        height: 124px;
+    }
+    @media (max-width: 991px) {
+        width: 0;
+        height: auto;
+    }
+    & img {
+        position: absolute;
+        top: auto;
+        bottom: -55px;
+        @media (max-width: 1199px) {
+            position: relative;
+            top: auto;
+            bottom: -30px;
+        }
+        @media (max-width: 991px) {
+            bottom: -21px;
+            right: -21px;
+            width: 162px;
+            position: absolute;
+        }
+       
+    }
+}
+
+.banner-quize-title {
+    color: #FFF;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 130%; 
+    @media (max-width: 991px) {
+        font-size: 20px;
+    }
+    & span {
+        display: block;
+        color: #F90;
+    }
+}
+
+.banner-quize-link {
+    max-width: 243px;
+    width: 100%;
+    @media (max-width: 1199px) {
+        width: 100%;
+        position: relative;
+        z-index: 5;
+    }
+    @media (max-width: 500px) {
+        max-width: 150px;
+    }
+    & .btn {
+        text-decoration: none;
+    }
+}
