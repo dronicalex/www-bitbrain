@@ -224,7 +224,7 @@ window.onload = function() {
         if(data.success == 1) {
            console.log('Форма отправлена');
            closePopup();
-           document.querySelector('.success-inner-title').innerHTML = 'Наш менеджер свяжется с вами в тение 15 минут';
+           document.querySelector('.success-inner-title').innerHTML = 'Спасибо! Ваша заявка принята, менеджер свяжется с вами в ближайшее время!';
            document.querySelector('.success').classList.add('active');
         } else {        
           document.querySelector('#callback input[name="username"]').parentElement.classList.add(data.username);
