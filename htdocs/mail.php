@@ -139,3 +139,16 @@ curl_setopt($ch, CURLOPT_URL,
             'https://api.unisender.com/ru/api/subscribe?format=json'); 
 $results = curl_exec($ch);
 */
+
+
+
+$postdata = http_build_query($subscribe);
+$opts = array('http' =>
+    array(
+        'method'  => 'POST',
+        'header'  => 'Content-type: application/x-www-form-urlencoded',
+        'content' => $postdata
+    )
+);
+$context  = stream_context_create($opts);
+$result = file_get_contents('https://api.unisender.com/ru/api/subscribe?format=json', false, $context);
