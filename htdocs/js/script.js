@@ -238,16 +238,36 @@ window.onload = function() {
   });
  }
 
+  function checkPhoneNum() {
+    let phoneInput = document.querySelector('input[name="whatsapp"]')
+    let valueInput = phoneInput.value;
+    let re = /^[- +()0-9]*$/;
+    let valid = re.test(valueInput);
+    if(!valid) {
+      valueInput = valueInput.slice(0, -1);
+      phoneInput.value = valueInput;
+    } 
+  }
  
  let inputs = document.querySelectorAll('#callback input');
  for (let i=0; i<inputs.length;i++) {
   inputs[i].addEventListener('change', function() {
     this.parentElement.classList.remove('is-invalid');
+    if(this.getAttribute('name') == 'whatsapp') {
+      checkPhoneNum();
+    }
   });
 
   inputs[i].addEventListener('keydown', function() {
     this.parentElement.classList.remove('is-invalid');
   });
+
+  inputs[i].addEventListener('keyup', function() {
+    if(this.getAttribute('name') == 'whatsapp') {
+        checkPhoneNum();
+    }
+  });
+
  }
 
  //form trigger
