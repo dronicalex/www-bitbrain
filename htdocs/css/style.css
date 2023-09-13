@@ -350,6 +350,7 @@ section.top .blocks-bg {
 
 .header-info .btn-login {
   margin-right: 10px;
+  display: none;
 }
 
 @media (max-width: 500px) {

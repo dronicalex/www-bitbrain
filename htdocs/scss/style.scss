@@ -306,6 +306,7 @@ section.top {
     }
     & .btn-login {
         margin-right: 10px;
+        display: none;
         @media (max-width: 500px) {
             margin-right: 5px;
         }
