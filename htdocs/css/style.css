@@ -3789,42 +3789,41 @@ li {
 }
 
 .bitbrain__title {
-	max-width: 1137px;
 	margin: 0px auto;
-	width: 100%;
-	margin-top: 36px;
+	width: 1920px;
+	left: 50%;
 	position: relative;
+	transform: translate(-50%);
+	margin-top: 36px;
+}
+
+@media (max-width: 998px) {
+	.bitbrain__title {
+		width: 1250px;
+	}
+}
+
+@media (max-width: 700px) {
+	.bitbrain__title {
+		width: 650px;
+	}
+}
+
+@media (max-width: 400px) {
+	.bitbrain__title {
+		width: 550px;
+	}
+}
+
+@media (max-width: 350px) {
+	.bitbrain__title {
+		width: 490px;
+	}
 }
 
 @media (max-width: 500px) {
 	.bitbrain__title {
 		margin-top: 18px;
-	}
-}
-
-.bitbrain__title::before {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 100vw;
-	height: 90px;
-	background-position: center center;
-	background-image: url(../img/line.svg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	content: "";
-}
-
-@media (max-width: 998px) {
-	.bitbrain__title::before {
-		height: 60px;
-	}
-}
-
-@media (max-width: 500px) {
-	.bitbrain__title::before {
-		height: 30px;
 	}
 }
 
