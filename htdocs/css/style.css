@@ -3410,7 +3410,7 @@ body._lock {
 
 .faq__wp {
 	display: grid;
-	grid-template-columns: 1fr 50%;
+	grid-template-columns: 1fr 53%;
 	gap: 75px;
 	margin-top: 40px;
 	align-items: flex-start;
