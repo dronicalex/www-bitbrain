@@ -3071,12 +3071,15 @@ body._lock {
 	position: absolute;
 	padding: 10px;
 	color: #f90;
+	font-size: 19px;
 	font-weight: 700;
 	line-height: 130%;
 }
 
 .ofer__img span img {
 	width: 45px;
+	margin: 3px 9px;
+	background-color: transparent;
 }
 
 .ofer__content {
@@ -3735,7 +3738,9 @@ li {
 		border: 1px solid #8d8d8d;
 	}
 }
-
+.bitbrain {
+	overflow: hidden;
+}
 .bitbrain__container {
 	padding-top: 180px;
 }
@@ -3982,6 +3987,7 @@ li {
 .kviz-bitbrain__left span {
 	font-weight: 700;
 	padding-bottom: 11px;
+	display: block;
 }
 
 .kviz-bitbrain__left p {

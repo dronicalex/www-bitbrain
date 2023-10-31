@@ -271,7 +271,7 @@ window.onload = function() {
  }
 
  //form trigger
- setTimeout(startWidget, 10000);
+//  setTimeout(startWidget, 10000);
  
  function startWidget() {
     document.querySelector('.widget-icon').click();
