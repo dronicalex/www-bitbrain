@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+		<title>Крипто академия Битбрейн</title>
+		<meta name="description" content="Даём практические знания для новичков и продвинутых пользователей в сфере криптовалют и блокчейна.">
+		<meta name="viewport" content="width=device-width">
+
+		<link rel="icon" href="favicon/favicon.ico">
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="favicon/site.webmanifest">
+
+		<link rel="stylesheet" href="css/fonts.css">
+		<link rel="stylesheet" href="css/style.css?v2.4">
+
+		<link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="fonts/Inter-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+		<!-- OpenGraph -->
+		<meta property="og:locale" content="ru_RU" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Битбрейн" />
+		<meta property="og:title" content="Крипто академия Битбрейн" />
+		<meta property="og:image" content="https://bitbrain.me/images/bage.jpg" />
+		<meta property="og:url" content="https://bitbrain.me/" />
+		<meta property="og:description" content="Даём практические знания для новичков и продвинутых пользователей в сфере криптовалют и блокчейна." />
+	</head>
+
+	<body>
+
+		<section class="top page-top">
+			<div class="top-bg">
+				<img src="images/blur-blue.svg" alt />
+			</div>
+			<div class="top-bg-img">
+				<img src="images/coin-1.png" alt class="coin-1" />
+				<img src="images/coin-2.png" alt class="coin-2" />
+				<img src="images/coin-3.png" alt class="coin-3" />
+			</div>
+
+			<div class="payment-page">
+				<div class="logo-block">
+					<a href="/" class="logo">
+						<img src="images/logo.svg" alt="BITTRAIN" />
+					</a>
+				</div>
+				<h1>Оплата доступа</h1>
+				<div class="subtitle">
+					Авторский курс "Как стать профи в крипте"
+				</div>
+				<div class="card-list">
+					<div class="card-list-li">
+						<img src="images/plus.svg" alt>
+						<span>Практикум по мемкоин: забрать х100 или ликвидация?</span>
+					</div>
+					<div class="card-list-li">
+						<img src="images/plus.svg" alt>
+						<span>Airdrop: всё, что нужно знать или как поднять миллион?</span>
+					</div>
+					<div class="card-list-li">
+						<img src="images/plus.svg" alt>
+						<span>Всё про пулы ликвидности Uniswap V2-V3</span>
+					</div>
+					<div class="card-list-li">
+						<img src="images/plus.svg" alt>
+						<span>Крипто-практикум: как стать гуру крипты</span>
+					</div>
+					<div class="card-list-li">
+						<img src="images/plus.svg" alt>
+						<span>Всё о криптовалюте за 90 минут</span>
+					</div>
+				</div>
+
+				<div class="payment-btns d-flex payment-btns-center">
+					<div class="payment-btn">
+						<span>Для оплаты рублями:</span>
+						<a href="https://shop.crypto-practice.ru/buy/553812" class="btn art-button-2" target="_blank">
+							Оплатить рублями
+						</a>
+					</div>
+					<div class="payment-btn">
+						<span>Для оплаты цифровыми активами:</span>
+						<a href="https://t.me/BBITBRAINBOT" class="btn art-button-2" target="_blank">
+							Оплатить в TG боте
+						</a>
+					</div>
+					<div class="payment-btn">
+						<span>Запросить реквизиты банковской карты для оплаты переводом:</span>
+						<a href="https://t.me/BitBrain_Support_Bot" class="btn art-button-2" target="_blank">
+							Запросить реквизиты
+						</a>
+					</div>
+				</div>
+
+			</div>
+
+		</section>
+
+		<section class="popup" id="popup-1">
+
+			<div class="popup-wrap">
+				<button class="popup-close">
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect y="18.7879" width="26.5701" height="1.7142" transform="rotate(-45 0 18.7879)" fill="#858585" />
+						<rect x="18.7881" y="20" width="26.5701" height="1.7142" transform="rotate(-135 18.7881 20)" fill="#858585" />
+					</svg>
+				</button>
+				<div class="message"></div>
+				<div class="popup-inner">
+
+					<div class="popup-title">
+						<span>Есть вопросы?</span>
+						Оставьте контакты, и наш менеджер свяжется с вами
+					</div>
+
+					<form action="/mail.php" method="post" class="ajax_form needs-validation" id="callback">
+						<input type="hidden" name="id" value="callback">
+						<div class="form-group form-floating">
+							<input type="text" name="username" class="form-control">
+							<label for="username">Имя*</label>
+							<div class="valid-feedback">
+								Все хорошо!
+							</div>
+							<div class="invalid-feedback">
+								Пожалуйста, введите имя
+							</div>
+						</div>
+
+						<div class="form-group d-none">
+							<input type="text" name="name" class="form-control" placeholder="Ваше имя">
+
+						</div>
+
+						<div class="form-group d-none">
+							<input type="text" name="mail-group" class="form-control" value="mail-group-2">
+
+						</div>
+
+						<div class="form-group d-none">
+							<input type="text" name="form-name" class="form-control" value>
+						</div>
+
+						<div class="form-group form-floating">
+							<input type="text" name="whatsapp" class="form-control" inputmode="text">
+							<label for="whatsapp">WhatsApp*</label>
+							<div class="invalid-feedback">
+								Пожалуйста, введите ваш WhatsApp
+							</div>
+						</div>
+
+						<div class="form-group form-floating">
+							<input type="text" name="telegram" class="form-control" inputmode="text">
+							<label for="telegram">Telegram*</label>
+							<div class="invalid-feedback">
+								Пожалуйста, введите ваш Telegram
+							</div>
+						</div>
+
+						<div class="form-group form-floating">
+							<input type="email" name="email" class="form-control" inputmode="text">
+							<label for="email">Email*</label>
+							<div class="invalid-feedback">
+								Пожалуйста, введите адрес электронной почты
+							</div>
+						</div>
+
+						<div class="form-check">
+							<input type="checkbox" name="accept" id="accept" value="1" checked>
+							<label for="accept">Я согласен с Политикой конфиденциальности</label>
+
+						</div>
+
+						<div class="form-bottom">
+
+							<button type="submit" name="form-send-button" class="btn art-button-2">
+								<span>Оставить заявку</span>
+							</button>
+
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</section>
+
+		<a href="#popup-1" class="popup-btn widget-icon">
+			<img src="images/icon-question.svg" alt />
+		</a>
+
+		<div class="success">
+			<div class="success-wrap">
+				<button class="success-close">
+					<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect y="28.8462" width="40.7945" height="1.63178" rx="0.81589" transform="rotate(-45 0 28.8462)" fill="#B4B4B4" />
+						<rect x="1.15332" width="40.7945" height="1.63178" rx="0.81589" transform="rotate(45 1.15332 0)" fill="#B4B4B4" />
+					</svg>
+				</button>
+
+				<div class="success-inner">
+					<img src="images/success.png" alt class="success-inner-img" />
+					<div class="success-inner-title">
+
+					</div>
+				</div>
+			</div>
+			<div class="success-overlay">
+
+			</div>
+		</div>
+
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+        ym(91659038, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+		<noscript><div><img src="https://mc.yandex.ru/watch/91659038" style="position:absolute; left:-9999px;" alt /></div></noscript>
+		<!-- /Yandex.Metrika counter -->
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-L0XJNE0HYS"></script>
+		<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-L0XJNE0HYS');
+    </script>
+
+		<script src="js/script.js?v1.7"></script>
+
+	</body>
+</html>

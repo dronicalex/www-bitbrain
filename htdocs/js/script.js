@@ -280,3 +280,27 @@ window.onload = function() {
 }
 
 
+
+  function scrollToSection(event) {
+    // Получаем href атрибут из элемента, по которому произошел клик
+    const href = event.currentTarget.getAttribute('href');
+    console.log(href);
+
+    // Извлекаем идентификатор секции из href
+    const sectionId = href.split('#')[1];
+    
+    const section = document.querySelector('.' + sectionId);
+    if (section) {
+      // Используем smooth scroll behavior для плавного скролла
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  let go = document.querySelectorAll('._go');
+  for (let index = 0; index < go.length; index++) {
+	const element = go[index];
+	element.addEventListener('click', function(e){
+		e.preventDefault()
+		scrollToSection(e)
+	})
+  }
