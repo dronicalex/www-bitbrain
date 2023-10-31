@@ -22,12 +22,12 @@ window.onload = function() {
       moveActive = true;
     } else if (window.pageYOffset == 0) {
       moveActive = false;
-      setTimeout(scrollDown, 5000);
+    //   setTimeout(scrollDown, 5000);
     }
   });
 
   
-  setTimeout(scrollDown, 5000);
+//   setTimeout(scrollDown, 5000);
 
 
   /* scroll */
