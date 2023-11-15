@@ -54,7 +54,6 @@ require_once __DIR__ . '/PHPMailer/Exception.php';
 require_once __DIR__ . '/PHPMailer/PHPMailer.php';
 require_once __DIR__ . '/PHPMailer/SMTP.php';
 
-
 $mail = new PHPMailer();
 $mail->CharSet = 'UTF-8';
 
@@ -69,12 +68,12 @@ $mail->SMTPAutoTLS = false;
 //$mail->SMTPSecure = "tls";
 $mail->SMTPAuth = true;
 
-
 //$mail->setFrom('www@bitbrain.me', 'BITBRAIN');<------>
 $mail->setFrom('no-reply@bitbrain.me', 'BITBRAIN');
 //$mail->AddAddress('support@bitbrain.me');
 $mail->AddAddress('orenlr56@yandex.ru');
-$mail->AddAddress('hova.ekaterina@yandex.ru');
+$mail->AddAddress('yygula93@gmail.com');
+$mail->AddAddress('fcbteam2016@gmail.com');
 
 $mail->Subject = 'Заявка с сайта PRO BITBRAIN';
 
@@ -109,45 +108,6 @@ if ($mail->send()) {
 	$result = "error";
 }
 
-/* unisender */
+// Код для отправки на UniSender не включен
 
-$api_key = '6rhfdo8myeiengg94xz7yt56fe37qtci3c7yuche';
-$list_ids = '144';
-if ($_POST['id'] == 'callback') {
-	$list_ids = '143';
-}
-$tags = '';
-$double_optin = 3;
-$overload = 0;
-$email_fo = $_POST["email"];
-$name_un = $_POST["username"];
-$form_name = $_POST["form-name"];
-$whatsapp = $_POST["whatsapp"];
-$telegram = $_POST["telegram"];
-
-$subscribe = array(
-	'api_key' => $api_key,
-	'list_ids' => $list_ids,
-	'double_optin' => $double_optin,
-	'fields[tags]' => $tags,
-	'fields[email]' => $email_fo,
-	'fields[phone]' => $whatsapp,
-	'fields[Name]' => $name_un,
-	'fields[formid]' => $form_name,
-	'fields[overload]' => $overload,
-	'fields[input]' => $whatsapp,
-	'fields[input_2]' => $telegram,
-);
-
-// Устанавливаем соединение
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, $subscribe);
-curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-curl_setopt(
-	$ch,
-	CURLOPT_URL,
-	'https://api.unisender.com/ru/api/subscribe?format=json'
-);
-$results = curl_exec($ch);
+echo json_encode(['success' => $result]);

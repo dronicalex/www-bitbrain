@@ -237,6 +237,34 @@ window.onload = function() {
     });
   });
  }
+  let form3 = document.querySelector('#callback2');
+ if(form3) {
+  form3.addEventListener('submit', function(event) {
+    event.preventDefault();
+    let formData2 = new FormData(form3);
+    let request = new XMLHttpRequest();
+    request.open('POST', '/mailtwo.php', true);
+    request.send(formData2);
+    request.addEventListener('readystatechange', function() {
+      if (this.readyState == 4 && this.status == 200) {
+       console.log(this.responseText)
+       let data = JSON.parse(this.responseText);
+        if(data.success == 1) {
+           console.log('Форма отправлена');
+           closePopup();
+           document.querySelector('.success-inner-title').innerHTML = 'Спасибо! Ваша заявка принята, менеджер свяжется с вами в ближайшее время!';
+           document.querySelector('.success').classList.add('active');
+        } else {        
+          document.querySelector('#callback2 input[name="username"]').parentElement.classList.add(data.username);
+          document.querySelector('#callback2 input[name="email"]').parentElement.classList.add(data.email);
+          document.querySelector('#callback2 textarea[name="quest"]').parentElement.classList.add(data.email);
+
+        }
+        
+      }
+    });
+  });
+ }
 
   function checkPhoneNum() {
     let phoneInput = document.querySelector('input[name="whatsapp"]')
