@@ -28,12 +28,6 @@ if ($_POST['id'] == 'callback') {
 		$result['telegram'] = 'is-invalid';
 		$errors = true;
 	}
-	if ((isset($_POST['quest'])) && (!empty($_POST["quest"]))) {
-		$result['quest'] = 'is-valid';
-	} else {
-		$result['quest'] = 'is-invalid';
-		$errors = true;
-	}
 }
 
 if ($errors) {

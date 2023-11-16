@@ -16,18 +16,7 @@ if ($_POST['id'] == 'callback') {
 		$result['username'] = 'is-invalid';
 		$errors = true;
 	}
-	if ((isset($_POST['whatsapp'])) && (!empty($_POST["whatsapp"])) && (strlen($_POST['whatsapp']) > 6)) {
-		$result['whatsapp'] = 'is-valid';
-	} else {
-		$result['whatsapp'] = 'is-invalid';
-		$errors = true;
-	}
-	if ((isset($_POST['telegram'])) && (!empty($_POST["telegram"]))) {
-		$result['telegram'] = 'is-valid';
-	} else {
-		$result['telegram'] = 'is-invalid';
-		$errors = true;
-	}
+
 	if ((isset($_POST['quest'])) && (!empty($_POST["quest"]))) {
 		$result['quest'] = 'is-valid';
 	} else {
