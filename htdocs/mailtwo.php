@@ -9,11 +9,17 @@ if ((isset($_POST['email'])) && (!empty($_POST["email"]))) {
 	$errors = true;
 }
 
-if ($_POST['id'] == 'callback') {
+if ($_POST['id'] == 'callback2') {
 	if ((isset($_POST['username'])) && (!empty($_POST["username"]))) {
 		$result['username'] = 'is-valid';
 	} else {
 		$result['username'] = 'is-invalid';
+		$errors = true;
+	}
+	if ((isset($_POST['telegram'])) && (!empty($_POST["telegram"]))) {
+		$result['telegram'] = 'is-valid';
+	} else {
+		$result['telegram'] = 'is-invalid';
 		$errors = true;
 	}
 
@@ -21,6 +27,12 @@ if ($_POST['id'] == 'callback') {
 		$result['quest'] = 'is-valid';
 	} else {
 		$result['quest'] = 'is-invalid';
+		$errors = true;
+	}
+	if (isset($_POST['accept']) && $_POST['accept'] == '1') {
+		$result['accept'] = 'is-valid';
+	} else {
+		$result['accept'] = 'is-invalid';
 		$errors = true;
 	}
 }
@@ -62,7 +74,7 @@ $mail->setFrom('no-reply@bitbrain.me', 'BITBRAIN');
 //$mail->AddAddress('support@bitbrain.me');
 $mail->AddAddress('orenlr56@yandex.ru');
 $mail->AddAddress('yygula93@gmail.com');
-$mail->AddAddress('fcbteam2016@gmail.com');
+// $mail->AddAddress('fcbteam2016@gmail.com');
 
 $mail->Subject = 'Заявка с сайта PRO BITBRAIN';
 
@@ -91,11 +103,11 @@ foreach ($_POST as $key => $value) {
 $body = "<table style='width: 100%;'>$message</table>";
 $mail->msgHTML($body);
 
-if ($mail->send()) {
-	$result = "success";
-} else {
-	$result = "error";
-}
+// if ($mail->send()) {
+// 	$result = "success";
+// } else {
+// 	$result = "error";
+// }
 
 // Код для отправки на UniSender не включен
 
