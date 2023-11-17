@@ -163,10 +163,10 @@ max-width: 1180px;
   background: linear-gradient(264.09deg, #FF9900 1.4%, #FAB323 49.02%, #FF9900 98.85%);
   box-shadow: 0px 50px 60px rgba(0, 0, 0, 0.2), inset 0px 2px 5px #FFFFFF;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 130%;
   text-align: center;
-  height: 70px;
+  height: 80px;
   color: #FFFFFF;
   max-width: 217px;
   display: flex;
@@ -1949,6 +1949,16 @@ box-shadow: none;
 	padding: 0px 20px;
 	padding-top: 190px;
 }
+@media (max-width:  500px ) {
+.payment-page._custom {
+padding-top: 180px;
+}
+}
+@media (max-width: 350px) {
+	.payment-page._custom {
+		padding-top: 150px;
+	}
+}
 
 @media (max-height: 710px) {
   .payment-page {
@@ -2043,6 +2053,7 @@ box-shadow: none;
   width: 100%;
   margin: 0 auto 1.5rem;
   text-align: left;
+  
 }
 
 .payment-page .payment-wpp .card-list{
@@ -2054,13 +2065,17 @@ box-shadow: none;
     max-width: 400px;
     margin: 0 auto 1rem;
   }
+  .payment-page .payment-wpp .card-list {
+	margin: 0 auto 30px;
+  }
 }
 
 .payment-btns {
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: 780px;
-  margin: 0 auto 2rem;
+  margin: 0 auto ;
+  margin-top: 50px;
   width: 100%;
 gap: 60px;
 row-gap: 20px;
@@ -2113,7 +2128,7 @@ row-gap: 20px;
   color: #262627;
   font-size: 18px;
   line-height: 130%;
-  margin-bottom: 0.5rem;
+  margin-bottom: 12px;
   display: block;
 }
 
@@ -2123,13 +2138,18 @@ row-gap: 20px;
   }
 }
 
+
 @media (max-width: 500px) {
   .payment-btn span {
     font-size: 16px;
     margin-bottom: 0.5rem;
   }
 }
-
+@media (max-width: 350px) {
+	.payment-btn span {
+		font-size: 14px;
+	}
+}
 .payment-btn .btn {
   width: 100%;
   max-width: 100%;
@@ -4415,7 +4435,7 @@ textarea {
 		background: #FFF;
 		max-width: 820px;
 		padding: 40px 50px;
-
+width: 100%;
 		margin: 0px auto;
 }
 @media (max-width:  998px ) {
@@ -4431,7 +4451,9 @@ textarea {
 
 @media (max-width:  700px ) {
 .payment-wpp .subtitle {
-		font-size: 22px;
+		font-size: 21px;
+		margin: 0px auto;
+		margin-bottom: 22px;
 		
 	}
 }
@@ -4439,7 +4461,18 @@ textarea {
 	border-radius: 5px;
 		background: #FFB21D;
 		box-shadow: none;
-		transition: 0.3s
+		transition: 0.3s;
+		height: 80px;
+}
+@media (max-width:  500px ) {
+.payment-wpp .art-button-2 {
+	height: 70px;
+}
+}
+@media (max-width: 350px) {
+	.payment-wpp .art-button-2 {
+		height: 60px;
+	}
 }
 .payment-wpp a:hover {
 	background: #F58405 ;
@@ -4448,7 +4481,7 @@ textarea {
 .bgb{
 	position: absolute;
 	width: 100%;
-	height: 100%;
+	height: max(100%, 100vh) ;
 	
 }
 .bgb img {
@@ -4470,4 +4503,37 @@ textarea {
 		padding-bottom: 100px;
 		position: relative;
 		z-index: 10;
+}
+
+.bgb2{
+	width: 100%;
+	pointer-events: none;
+	height: 700px;
+	position: absolute;
+	top: 0;
+	left: 0;
+		z-index: 3;
+	
+}
+.bgb2 img {
+	position: absolute;
+	width: 100%;
+
+
+}
+@media (max-width:  998px ) {
+.bgb2 img {
+	display: none;
+
+	}
+}
+@media (max-width:  500px ) {
+ .payment-wpp{
+padding: 30px 25px;
+ }
+}
+@media (max-width: 350px) {
+	.payment-wpp {
+		padding: 22px 15px;
+	}
 }

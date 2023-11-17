@@ -103,11 +103,11 @@ foreach ($_POST as $key => $value) {
 $body = "<table style='width: 100%;'>$message</table>";
 $mail->msgHTML($body);
 
-// if ($mail->send()) {
-// 	$result = "success";
-// } else {
-// 	$result = "error";
-// }
+if ($mail->send()) {
+	$result = "success";
+} else {
+	$result = "error";
+}
 
 // Код для отправки на UniSender не включен
 
