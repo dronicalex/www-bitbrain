@@ -1588,9 +1588,10 @@ box-shadow: none;
 .success-wrap {
   width: 420px;
   height: 488px;
-  background: url(../images/success-bg.png) top center/cover;
+  background: url(../img/paqq.png) top center/cover;
   position: absolute;
   z-index: 55;
+	background-color: #fff;
   top: 50%;
   left: 50%;
   margin-top: -244px;

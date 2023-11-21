@@ -9,33 +9,33 @@ if ((isset($_POST['email'])) && (!empty($_POST["email"]))) {
 	$errors = true;
 }
 
-if ($_POST['id'] == 'callback2') {
-	if ((isset($_POST['username'])) && (!empty($_POST["username"]))) {
-		$result['username'] = 'is-valid';
-	} else {
-		$result['username'] = 'is-invalid';
-		$errors = true;
-	}
-	if ((isset($_POST['telegram'])) && (!empty($_POST["telegram"]))) {
-		$result['telegram'] = 'is-valid';
-	} else {
-		$result['telegram'] = 'is-invalid';
-		$errors = true;
-	}
 
-	if ((isset($_POST['quest'])) && (!empty($_POST["quest"]))) {
-		$result['quest'] = 'is-valid';
-	} else {
-		$result['quest'] = 'is-invalid';
-		$errors = true;
-	}
-	if (isset($_POST['accept']) && $_POST['accept'] == '1') {
-		$result['accept'] = 'is-valid';
-	} else {
-		$result['accept'] = 'is-invalid';
-		$errors = true;
-	}
+if ((isset($_POST['username'])) && (!empty($_POST["username"]))) {
+	$result['username'] = 'is-valid';
+} else {
+	$result['username'] = 'is-invalid';
+	$errors = true;
 }
+if ((isset($_POST['telegram'])) && (!empty($_POST["telegram"]))) {
+	$result['telegram'] = 'is-valid';
+} else {
+	$result['telegram'] = 'is-invalid';
+	$errors = true;
+}
+
+if ((isset($_POST['quest'])) && (!empty($_POST["quest"]))) {
+	$result['quest'] = 'is-valid';
+} else {
+	$result['quest'] = 'is-invalid';
+	$errors = true;
+}
+if (isset($_POST['accept']) && $_POST['accept'] == '1') {
+	$result['accept'] = 'is-valid';
+} else {
+	$result['accept'] = 'is-invalid';
+	$errors = true;
+}
+
 
 if ($errors) {
 	$result['success'] = 0;
