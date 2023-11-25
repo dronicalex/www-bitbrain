@@ -249,12 +249,12 @@ window.onload = function() {
       if (this.readyState == 4 && this.status == 200) {
        console.log(this.responseText)
 
- 		closePopup();
-	   document.querySelector('.success').classList.add('active');
-       let data = JSON.parse(this.responseText);
+ 		let data = JSON.parse(this.responseText);
         if(data.success == 1) {
            console.log('Форма отправлена');
-          
+          closePopup();
+	   document.querySelector('.success').classList.add('active');
+       
         //    document.querySelector('.success-inner-title').innerHTML = 'Спасибо! Ваша заявка принята, менеджер свяжется с вами в ближайшее время!';
         //    document.querySelector('.success').classList.add('active');
         } else {        

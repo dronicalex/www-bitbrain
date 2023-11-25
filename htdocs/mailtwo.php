@@ -111,4 +111,4 @@ if ($mail->send()) {
 
 // Код для отправки на UniSender не включен
 
-echo json_encode(['success' => $result]);
+// echo json_encode(['success' => $result]);
