@@ -261,7 +261,7 @@ window.onload = function() {
           document.querySelector('#callback2 input[name="username"]').parentElement.classList.add(data.username);
           document.querySelector('#callback2 input[name="email"]').parentElement.classList.add(data.email);
           document.querySelector('#callback2 textarea[name="quest"]').parentElement.classList.add(data.quest);
-          document.querySelector('#callback2 input[name="telegram"]').parentElement.classList.add(data.telegtam);
+          document.querySelector('#callback2 input[name="telegram"]').parentElement.classList.add(data.telegram);
 
         }
         
