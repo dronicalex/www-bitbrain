@@ -3205,7 +3205,9 @@ body._lock {
 }
 .ofer__img span._rass {
 	color: #fff;
-	background-color: #000;
+	border: 4px solid #FFF;
+	text-transform: uppercase;
+		background: #F00;
 	top: auto;
 	bottom: 17px;
 }
@@ -4537,4 +4539,56 @@ padding: 30px 25px;
 	.payment-wpp {
 		padding: 22px 15px;
 	}
+}
+
+.button-how-rass{
+	margin: 0px auto;
+	color: #199CDE;
+	font-size: 18px;font-weight: 700;
+	line-height: 130%;
+		/* 23.4px */
+		text-decoration-line: underline;
+		text-transform: uppercase;
+		margin-top: 30px;
+		display: block;
+		max-width: max-content;
+		position: relative;
+		display: flex;
+		align-items: center;
+
+		gap: 10px;
+}
+.button-how-rass:hover {
+	background: transparent !important;
+	color: #1181b9;
+}
+
+.button-how-rass::before {
+	position: relative;
+	display: block;
+	content: '';
+	width: 25px;
+	height: 25px;
+	background-size: contain;
+	background-repeat: no-repeat;
+background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 25 25" fill="none"><circle cx="12.5" cy="12.5" r="12.5" fill="%23199CDE"/><path d="M11.3448 15.5509V15.3409C11.3489 14.6204 11.4127 14.046 11.5362 13.6178C11.6639 13.1896 11.8491 12.8438 12.0921 12.5803C12.335 12.3168 12.6273 12.078 12.969 11.8639C13.2243 11.6992 13.4528 11.5283 13.6546 11.3513C13.8563 11.1742 14.0169 10.9787 14.1363 10.7646C14.2557 10.5463 14.3154 10.3034 14.3154 10.0358C14.3154 9.75172 14.2474 9.50262 14.1116 9.28853C13.9757 9.07443 13.7925 8.90974 13.5619 8.79446C13.3355 8.67917 13.0843 8.62153 12.8085 8.62153C12.5408 8.62153 12.2876 8.68123 12.0488 8.80063C11.81 8.91592 11.6144 9.08884 11.4621 9.31941C11.3098 9.54586 11.2274 9.82789 11.2151 10.1655H8.69531C8.7159 9.34205 8.91353 8.6627 9.2882 8.12746C9.66287 7.5881 10.159 7.18667 10.7766 6.92316C11.3942 6.65554 12.0756 6.52173 12.8208 6.52173C13.6401 6.52173 14.3648 6.6576 14.9947 6.92934C15.6247 7.19696 16.1187 7.58604 16.4769 8.09658C16.8351 8.60712 17.0142 9.22265 17.0142 9.94317C17.0142 10.4249 16.9339 10.8531 16.7734 11.2278C16.6169 11.5983 16.3966 11.9277 16.1126 12.2159C15.8285 12.5 15.4929 12.7573 15.1059 12.9879C14.7806 13.1814 14.513 13.3831 14.303 13.5931C14.0972 13.8031 13.9428 14.046 13.8398 14.3219C13.741 14.5977 13.6895 14.9374 13.6854 15.3409V15.5509H11.3448ZM12.5676 19.5034C12.1559 19.5034 11.8038 19.3593 11.5115 19.0711C11.2233 18.7788 11.0813 18.4288 11.0854 18.0212C11.0813 17.6177 11.2233 17.2719 11.5115 16.9837C11.8038 16.6955 12.1559 16.5514 12.5676 16.5514C12.9587 16.5514 13.3025 16.6955 13.599 16.9837C13.8954 17.2719 14.0457 17.6177 14.0498 18.0212C14.0457 18.293 13.9736 18.5421 13.8337 18.7685C13.6978 18.9908 13.5187 19.17 13.2964 19.3058C13.074 19.4376 12.8311 19.5034 12.5676 19.5034Z" fill="white"/></svg>');
+}
+@media (max-width: 500px) {
+	.button-how-rass {
+		font-size: 16px;
+		margin-top: 20px;
+	}
+		.button-how-rass::before {
+			width: 22px;
+			height: 22px;
+		}
+}
+@media (max-width: 450px) {
+	.button-how-rass {
+		font-size: 12px;
+	}
+		.button-how-rass::before {
+			width: 18px;
+			height: 18px;
+		}
 }
