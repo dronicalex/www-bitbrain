@@ -4592,3 +4592,108 @@ background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg
 			height: 18px;
 		}
 }
+
+.viz-bitbrain__wp2{
+	margin-top: 160px;
+	margin-bottom: 50px;
+}
+.viz-bitbrain__wp2 a{
+	flex-direction: row;
+	gap: 20px;
+}
+.viz-bitbrain__wp2 .kviz-bitbrain__img{
+	position: relative;
+}
+.viz-bitbrain__wp2 .kviz-bitbrain__btn div {
+	min-width: 290px;
+}
+.viz-bitbrain__wp2 .kviz-bitbrain__left span{
+font-size: 26px;
+max-width: 100%;
+}
+.viz-bitbrain__wp2 .kviz-bitbrain__left{
+	max-width: 380px;
+	width: 100%;
+}
+.viz-bitbrain__wp2 .kviz-bitbrain__img{
+width: 255px;
+bottom: -30px;
+transform: translate(-10px);
+}
+
+@media (max-width:  998px ) {
+.viz-bitbrain__wp2 {
+		margin-top: 130px;
+	}
+
+	.viz-bitbrain__wp2 a {
+		flex-direction: column;
+		gap: 3px;
+		position: relative;
+	}
+
+	.viz-bitbrain__wp2 .kviz-bitbrain__img {
+		position: absolute;
+		right: 25px;
+		left: auto;
+		top: 50% !important;
+		transform: translate(0px, -50%) !important;
+		bottom: 0 !important;
+	}
+
+	.viz-bitbrain__wp2 .kviz-bitbrain__btn div {
+		min-width: 290px;
+	}
+
+
+
+	.viz-bitbrain__wp2 .kviz-bitbrain__img {
+		width: 255px;
+		bottom: -30px;
+		transform: translate(-10px);
+	}
+}
+@media (max-width: 700px) {
+	.viz-bitbrain__wp2 {
+		margin-top: 90px;
+	}
+
+	.viz-bitbrain__wp2 a {
+		flex-direction: column;
+		gap: 0px;
+		position: relative;
+	}
+
+	.viz-bitbrain__wp2 .kviz-bitbrain__img {
+		position: relative;
+		right: 0px;
+		left: auto;
+		top: 0% !important;
+		transform: translate(0px, 0%) !important;
+		bottom: 0 !important;
+		margin-bottom: 8px;
+		margin-top: -5px;
+	}
+
+	.viz-bitbrain__wp2 .kviz-bitbrain__btn div {
+		min-width: 100%;
+	}
+.viz-bitbrain__wp2 .kviz-bitbrain__left span {
+	font-size: 22px;
+}
+
+
+	.viz-bitbrain__wp2 .kviz-bitbrain__img {
+		width: 255px;
+		bottom: -30px;
+		transform: translate(-10px);
+	}
+}
+@media (max-width:  350px ) {
+.viz-bitbrain__wp2 .kviz-bitbrain__left span {
+		font-size: 20px;
+	}
+.viz-bitbrain__wp2	.kviz-bitbrain__btn div{
+	font-size: 16px;
+}
+}
