@@ -4495,17 +4495,26 @@ width: 100%;
 }
 .dis-link{
 	margin: 0px auto;
-	width: max-content;
+	max-width: 700px;
 	display: block;
 	color: #B4B4B4;
 	margin-top: 30px;
 		text-align: center;
 		font-size: 16px;
 		line-height: 150%;
-		text-decoration-line: underline;
+		
 		padding-bottom: 100px;
 		position: relative;
 		z-index: 10;
+}
+@media (max-width:  998px ) {
+.dis-link {
+	/* max-width: 290px; */
+}
+}
+.dis-link a{
+text-decoration-line: underline;
+color: inherit;
 }
 
 .bgb2{
