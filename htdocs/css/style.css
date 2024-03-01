@@ -4164,25 +4164,27 @@ text-decoration: none;
 }
 
 .kviz-bitbrain__left span {
-	font-weight: 700;
-	padding-bottom: 11px;
+	/* font-weight: 700; */
+	/* padding-bottom: 11px; */
 	display: block;
 	font-size: 22px;
 	max-width: 320px;
 }
 
 .kviz-bitbrain__left p {
-	font-weight: 300;
-	font-size: 18px;
+	font-weight: 700;
 }
 
 .kviz-bitbrain__img {
 	width: 240px;
 	height: 100%;
-	position: absolute;
+	position: relative;
 	bottom: 0;
 	right: 0;
 	margin-top: auto;
+	overflow: hidden;
+	margin-top: -120px;
+	margin-bottom: -10px;
 }
 
 @media (max-width: 998px) {
@@ -4199,14 +4201,24 @@ text-decoration: none;
 		position: relative;
 		top: 0;
 		transform: translate(0px);
-		height: 200px;
+		/* height: 200px; */
 		order: 1;
 		margin: 0px auto;
+	}
+	.bitbrain__kviz{
+		padding: 60px 50px;
+	}
+}
+@media (max-width: 500px) {
+	.bitbrain__kviz {
+	padding: 30px;
+	padding-top: 0;
 	}
 }
 
 .kviz-bitbrain__img img {
-	position: absolute;
+	position: relative;
+	margin-bottom: -50px;
 	bottom: 0px;
 	left: 0;
 	width: 100%;
@@ -4222,7 +4234,7 @@ text-decoration: none;
 
 @media (max-width: 998px) {
 	.kviz-bitbrain__img img {
-		bottom: 0;
+		bottom: -20px;
 		top: auto;
 		transform: translate(0px);
 	}
@@ -4231,6 +4243,10 @@ text-decoration: none;
 	.kviz-bitbrain__img  {
 		margin-top: 30px;
 	}
+		.kviz-bitbrain__img img {
+			bottom: 0px;
+			margin-bottom: 0px;
+		}
 }
 
 @media (max-width: 998px) {
@@ -4621,11 +4637,11 @@ font-size: 26px;
 max-width: 100%;
 }
 .viz-bitbrain__wp2 .kviz-bitbrain__left{
-	max-width: 380px;
+	max-width: 290px;
 	width: 100%;
 }
 .viz-bitbrain__wp2 .kviz-bitbrain__img{
-width: 255px;
+width: 361px;
 bottom: -30px;
 transform: translate(-10px);
 }
@@ -4657,9 +4673,10 @@ transform: translate(-10px);
 
 
 	.viz-bitbrain__wp2 .kviz-bitbrain__img {
-		width: 255px;
+		width: 333px;
 		bottom: -30px;
 		transform: translate(-10px);
+		overflow: visible;
 	}
 }
 @media (max-width: 700px) {
@@ -4681,7 +4698,7 @@ transform: translate(-10px);
 		transform: translate(0px, 0%) !important;
 		bottom: 0 !important;
 		margin-bottom: 8px;
-		margin-top: -5px;
+		/* margin-top: -5px; */
 	}
 
 	.viz-bitbrain__wp2 .kviz-bitbrain__btn div {
