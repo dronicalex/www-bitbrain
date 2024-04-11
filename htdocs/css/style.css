@@ -4752,7 +4752,7 @@ transform: translate(-10px);
 .help-text {
   display: none;
   position: relative;
-  max-width: 230px;
+  max-width: 240px;
   font-weight: 400;
   margin-right: 20px;
   font-size: 18px;
