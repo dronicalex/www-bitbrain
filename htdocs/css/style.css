@@ -4494,7 +4494,11 @@ width: 100%;
 	}
 }
 .payment-wpp a:hover {
-	background: #F58405 ;
+	background: #F58405;
+}
+
+.public-offer a:hover {
+	background: #ffffff;
 }
 
 .bgb{

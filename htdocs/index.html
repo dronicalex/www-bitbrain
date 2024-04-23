@@ -304,7 +304,7 @@
 						<div class="subscribe-block">
 							<div class="subscribe-title">Будьте в курсе новостей</div>
 							<div class="subscribe-subtitle">
-								Даю согласие на обработку моих персональных данных
+								Я согласен с <a href="https://pro-blockchain.com/info/public-offer" target="_blank">публичной офертой</a>
 							</div>
 						</div>
 						<div class="subscribe-form">
@@ -422,8 +422,7 @@
 						<div class="footer-bl">
 							<p>Copyright© 2023 All rights reserved</p>
 							<div>
-								<a href="policy">Политика конфиденциальности</a>
-								<a href="disclaimer">Дисклеймер</a>
+								<a href="https://pro-blockchain.com/info/public-offer">Публичная оферта</a>
 							</div>
 						</div>
 						<div class="footer-br">
@@ -452,7 +451,7 @@
 						<form action="/mailtwo.php" method="post" class="ajax_form needs-validation" id="callback2">
 							<input type="hidden" name="id" value="callback">
 							<div class="form-group form-floating">
-								<input type="text" name="username" class="form-control">
+								<input type="text" name="username" id="username" class="form-control">
 								<label for="username">Имя*</label>
 								<div class="valid-feedback">
 									Все хорошо!
@@ -477,14 +476,14 @@
 							</div>
 
 							<div class="form-group form-floating">
-								<input type="email" name="email" class="form-control" inputmode="text">
+								<input type="email" name="email" id="email" class="form-control" inputmode="text">
 								<label for="email">Email*</label>
 								<div class="invalid-feedback">
 									Пожалуйста, введите адрес электронной почты
 								</div>
 							</div>
 							<div class="form-group form-floating">
-								<input type="text" name="telegram" class="form-control" inputmode="text">
+								<input type="text" name="telegram" id="telegram" class="form-control" inputmode="text">
 								<label for="telegram">Telegram*</label>
 								<div class="invalid-feedback">
 									Пожалуйста, введите ваш Telegram
@@ -499,8 +498,8 @@
 							</div>
 
 							<div class="form-check">
-								<input type="checkbox" name="accept" id="accept2" value="1" checked>
-								<label for="accept2">Я согласен с Политикой конфиденциальности</label>
+								<input type="checkbox" name="accept" id="accept2" value="1" required checked>
+								<label for="accept2">Я согласен с <a href="https://pro-blockchain.com/info/public-offer" target="_blank">публичной офертой</a></label>
 
 							</div>
 
